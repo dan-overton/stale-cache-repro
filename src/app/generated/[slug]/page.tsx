@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
   const data = await res.json();
 
-  console.log(`Rendering page ${data.slug} with ${data.time}`);
+  console.log(`Rendering page ${params.slug} with ${data.time}`);
 
   return (
     <div>
