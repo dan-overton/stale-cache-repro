@@ -9,6 +9,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       : "http://localhost:3000/api/get-time",
     {
       method: "POST",
+      body: JSON.stringify({ slug: params.slug }),
       next: { tags: [`time-${params.slug}`] },
     }
   );
