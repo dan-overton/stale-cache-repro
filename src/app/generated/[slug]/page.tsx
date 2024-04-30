@@ -14,7 +14,7 @@ export async function generateMetadata({
     {
       method: "POST",
       body: JSON.stringify({ slug: params.slug }),
-      next: { tags: [`time-${params.slug}`] },
+      next: { tags: [`timeValue-${params.slug}`] },
     }
   );
 
@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     {
       method: "POST",
       body: JSON.stringify({ slug: params.slug }),
-      next: { tags: [`time-${params.slug}`] },
+      next: { tags: [`timeValue-${params.slug}`] },
     }
   );
   const data = await res.json();
